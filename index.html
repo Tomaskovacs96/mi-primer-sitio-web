@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="esES">
+<head>
+    <meta name="description" content="Sitio web personal de Tomas kovacs, estudiante de programacion front-end">
+    <meta name="keywords" content="Html, Css, Programacion, Front-end, Tomas Kovacs"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <!--inicio de cabeza (menu y titulo)-->
+<header>
+    <div class="encabezado" id="encabezado">
+    <img src="T.PNG" alt="logo" class="logo">
+    <h1 class="titulo">Tomas Kovacs</h1>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="#encabezado" target="_parent">Inicio</a></li>
+            <li><a href="#informacion" target="_parent">Informacion</a></li>
+            <li><a href="#formulario" target="_parent">Formulario</a></li>
+            <li><a href="#contacto" target="_parent">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<!--fin de cabeza-->
+<!--cuerpo-->
+<main>
+    <div class="flex">
+    <div class="imagenes">
+        <img src="codigos-html-para-paginas-web.jpg" alt="codigo html" width="200px" height="200px">
+        <img src="/logo-html.jpg" alt="html" width="200px" height="200px">
+        <img src="/logo-css.jpg" alt="css" width="200px" height="200px">
+    </div>
+    <div class="articulo" id="informacion">
+        <h2>Mi historia</h2>
+        <p><data>Mi nombre es Tomas Kovacs naci el 31 de mayo de 1996</data><br>
+        y estoy estudiando programacion enfocada al front end.<br>
+        En esta pagina veremos un poco de mis habilidades con el <span>HTML5</span> y con <span>CSS3</span>.<br>
+        La programacion es algo que me gusta y que me apasiona por eso actualmente<br>
+        estoy esforzandome para poder ser un buen programador.</p><br>
+        <p>Espero poder tener la oportunidad de poder<br>
+        demostrar todas mis habilidades y estar al nivel<br>
+        de los desafios que eso puede conllevar.</p>
+        <p>Y espero con ansias cada nuevo paso en esta hermosa carrera.</p>
+    </div>
+    <div class="divfor" id="formulario">
+        <form action="#" class="formulario">
+        <label for="nombre">Nombre:<input type="text" name="nombre" placeholder="Tomas" id="nombre" pattern="[A-Za-z\s]+" title="solo letras y espacios" required></label><br>
+        <label for="apellido">Apellido:<input type="text" name="apellido" placeholder="Kovacs" id="apellido" pattern="[A-Za-z\s]+" title="solo letras y espacios" required></label><br>
+        <label for="edad">Edad:<input type="number" name="edad" min="18" max="99" id="edad" required></label><br>
+        <label for="email">Correo electronico:<input type="email" name="email" placeholder="ejemplo@ejemplo.com" id="email" required></label><br>
+        <label for="comentario">deja tu opinion
+            <textarea name="comentario" id="comentario" minlength="""50" maxlength="""300" rows="10" cols="30" required placeholder="Escribe aca..."></textarea>
+        </label><br>
+        <label for="experiencia">Como fue tu experiencia en esta pagina?<br>
+            <input type="radio" id="experiencia" name="experiencia" value="buena" required>Buena<br>
+            <input type="radio" id="experiencia" name="experiencia" value="regular"required>Regular<br>
+            <input type="radio" id="experiencia" name="experiencia" value="mala"required>Mala<br>
+        </label><br>
+        <input type="submit" value="Enviar">
+        </form>
+        <br>
+        <div class="video">
+            <video src="/Matrix Rain Codes (4K FULL HD).mp4" autoplay loop muted width="300px" title="codigo de matrix"></video>
+        </div>
+    </div>
+    </div>
+</main>
+<!--fin de cuerpo-->
+<!--inicio de pie de pagina-->
+<footer id="contacto">
+<small>© 2024 mi sitio web</small>
+<div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=61561610551061" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/tomaskovacs96/" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</footer>
+<!--fin de pie-->
+</body>
+</html>

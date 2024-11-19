@@ -1,0 +1,273 @@
+html, body, div, selection, header, footer, ul, li, p, h1, h2, h3, a{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    }
+    /*colores generales*/
+    :root{
+        --fondo-header:url(gray-gradient-minimal-wavy-design-vector.jpg);
+        --link-menu:black;
+        --fondo-body: rgb(220, 223, 221);
+        --link-menu-mouse:rgba(255, 255, 255, 0.137);
+    }
+    /*letras personalizadas*/
+    @font-face {
+    font-family:"menu";
+    src: url(DreamFlourish.otf);
+    }
+    @font-face {
+    font-family: "titulo";
+    src: url(GAMEDAY.ttf);
+    }
+    /*cabecera*/
+    header{
+    background-image: var(--fondo-header);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    height: auto;
+    border-bottom: 0.5px solid black;
+    }
+    .encabezado{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px;
+    }
+    /*titulo*/
+    .titulo{
+    font-family: "titulo";
+    font-weight: lighter;
+    font-size: 2rem;
+    text-align: left;
+    }
+    /*menu*/
+    .menu a{
+    color:var(--link-menu);
+    font-size: 30px;
+    text-decoration: none;
+    }
+    .menu a:hover{
+    background-color: var(--link-menu-mouse);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    transition: border 0.3s ease-in-out;
+    }
+    .menu ul{
+    font-family: "menu";
+    font-size: 35px;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 2.5rem;
+    }
+    .menu ul li{
+    margin-right: 50px;
+    }
+    .menu ul li:last-child{
+    margin-right: 0;
+    }
+    /*cuerpo*/
+    main{
+    background-color: var(--fondo-body);
+    }
+    .flex{
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+    /*imagenes*/
+    .imagenes{
+    width: 200px;
+    }
+    /*articulo*/
+    .articulo{
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+    }
+    .articulo span{
+    text-decoration: underline;
+    text-decoration-thickness: 2px ;
+    text-decoration-color: #555;
+    text-underline-offset: 3px;
+    }
+    /*formulario*/
+    .divfor{
+    font-family: sans-serif;
+    width: 300px;
+    }
+    /*pie*/
+    footer{
+    background-color: var(--fondo-body);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 0.5px solid black;
+    }
+    footer a{
+    text-decoration: none;
+    padding: 10px;
+    }
+/*mediaqueris*/
+/*diseño moviles (hasta 767px)*/
+@media (max-width:767px){
+    /*cabecera*/
+    header{
+        height: auto;
+        width: 100;
+    }
+    /*menu*/
+    .menu{
+        text-align: center;
+    }
+    .menu ul{
+        display: block;
+    }
+    .menu ul li{
+        margin: 0;
+    }
+    .menu a{
+        color: black;
+        font-size: 2rem;
+        padding: 10px;
+        display: block;
+    }
+    .menu a:hover{
+        background-color: var(--link-menu-mouse);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    /*logo*/
+    .logo{
+        width: 120px;
+        height: 120px;
+    }
+    /*articulo*/
+    .flex{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .flex .articulo{
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    .flex .imagenes{
+        width: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .flex .divfor{
+        margin-bottom: 40px;
+    }
+    /*formulario*/
+    .formulario label{
+        font-size: 1rem;
+    }
+    /*footer*/
+    footer{
+        font-size: 18px;
+    }
+    .social-icons{
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+}
+/*diseño para tablet (768px a 1024px)*/
+@media (min-width:768px) and (max-width:1024px){
+    /*cabecera*/
+    header{
+        height: auto;
+    }
+    /*menu*/
+    .menu{
+        display: block;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+    }
+    .menu ul li{
+        margin:10px 0;
+    }
+    .menu a{
+        color: black;
+        font-size: 2rem;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+    .menu a:hover{
+        background-color: var(--link-menu-mouse);
+    }
+    /*logo*/
+    .logo{
+        width: 140px;
+        height: 140px;
+    }
+    /*articulo*/
+    .flex{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flex .articulo{
+        width: 60%;
+        font-size: 1.5rem;
+    }
+    .flex .imagenes{
+        width: auto;
+    }
+    /*formulario*/
+    .formulario label{
+        font-size: 1.1rem;
+    }
+    /*footer*/
+    footer{
+        font-size: 22px;
+    }
+}
+/*diseño para pantallas grandes (desktops)*/
+@media (min-width:1025px){
+    /*menu*/
+    .menu a{
+        color:var(--link-menu);
+        font-size: 30px;
+        padding: 10px;
+        display: block;
+    }
+    .menu a:hover{
+        background-color: var(--link-menu-mouse);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    /*logo*/
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+    /*articulo*/
+    .flex{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .flex .articulo{
+        width: 600px;
+        font-size: 2rem;
+    }
+    /*formulario*/
+    .formulario label{
+        font-size: 25px;
+    }
+}
